@@ -28,16 +28,33 @@ export default function AddBirthday() {
     hideDatePicker();
   };
 
+  const onChange = (e,type) => {
+
+    setFormData({...formData,[type]:e.nativeEvent.text})
+  }
+
   return (
     <>
         <View>
-            <TextInput placeholder = 'Nombre' placeholderTextColor='#969696' />
+            <TextInput 
+
+            placeholder = 'Nombre' 
+            placeholderTextColor='#969696' 
+            onChange={e => onChange(e,'name')}
+            />
         </View>
         <View>
-            <TextInput placeholder = 'Apellidos' placeholderTextColor='#969696' />
+            <TextInput 
+            placeholder = 'Apellidos' 
+            placeholderTextColor='#969696' 
+            onChange={e => onChange(e,'lastName')}
+            />
         </View>
         <View>
           <Text
+          style={{color:formData.dateBirth ? '#00f' : '#969696',
+            fontSize:18
+          }}
           title="Show Date Picker" onPress={showDatePicker}>
             {
               formData.dateBirth 
