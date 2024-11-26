@@ -15,6 +15,7 @@ export default function ListBirthday() {
                     <Text>Lista</Text>
                     <Text>Lista</Text>
                     <Text>Lista</Text>
+                    
                 </>
             )  : (
                 <AddBirthday/>

@@ -6,6 +6,8 @@ import app from './src/utils/firebase'
 import ListBirthday from './src/components/ListBirthday';
 import Auth from './src/components/Auth';
 
+//npm calendar
+
 export default function App() {
 
   const [user, setUser] = useState(undefined)
@@ -62,7 +64,8 @@ const styles = StyleSheet.create({
   container: {
     
     height:'100%',
-    backgroundColor: '#1d1d42',
+
+    backgroundColor: '#abcdef',
     
   },
 });
